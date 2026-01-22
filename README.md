@@ -1,0 +1,2 @@
+# rag-squad
+RAG system built and tested for select few articles about computer science and similar topics. Wikipedia articles and questions used for testing come from Stanford Question Answering Dataset.
