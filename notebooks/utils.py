@@ -8,6 +8,11 @@ def load_processed_data(file_path="../data/processed/squad_processed.pkl"):
         data = pickle.load(f)
     return data["docs_for_splitter"], data["questions_ground_truth"]
 
+def load_mini_question_set(file_path="../data/processed/squad_processed_mini.pkl"):
+    with open(file_path, "rb") as f:
+        data = pickle.load(f)
+    return data["questions_ground_truth"]
+
 def evaluate_retrieval(questions, retriever, k_values=[1, 3, 5, 7, 10]):
     hits = {k: 0 for k in k_values}
     total_mrr = 0.0
